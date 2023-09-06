@@ -31,7 +31,7 @@ dxdt = @(t,y,K0,P0) [ -kon_A * y(1) * (K0 - y(3)) + koff_I * y(3) + kcat_I * y(4
                        kon_A * y(1) * (K0 - y(3)) - koff_I * y(3) - kcat_A * y(3) ; % dIK/dt
                        kon_I * y(2) * (P0 - y(4)) - koff_A * y(4) - kcat_I * y(4)]; % dAP/dt
 
-[T,X] = ode45(@(t,y) dxdt(t,y,K_tot,P_tot) ,[0 5],[I_int;A_int;IK_int;AP_int]);
+[T,X] = ode45(@(t,y) dxdt(t,y,K_tot,P_tot) ,[0 1],[I_int;A_int;IK_int;AP_int]);
 
 sum(X(length(X),:)) % this should be 1
 
