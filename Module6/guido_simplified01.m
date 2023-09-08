@@ -232,8 +232,8 @@ for iParam=1:numel(paramArray)
     kon = 0.001; % s^-1 uM^-1
     koff = 0.0005; % s^-1
     
-    I = 10; % EDIT FOR HW1
-    C = paramArray(iParam); % ENDOGENOUS activatory transcription factor % EDIT FOR HW1
+    I = paramArray(iParam); % EDIT FOR HW1
+    C = 10; % ENDOGENOUS activatory transcription factor % EDIT FOR HW1
     
     M =@(C2,t) [-kon*(C+C2)-kon*I,  +koff*I,          koff     ,        0;
                 +kon*I,             -koff*I-kon*(C+C2),             0,   +koff;
@@ -265,7 +265,7 @@ end
 
 figure(17); clf;
 plot(paramArray,g_storage, '-b')
-xlabel('Concentration of activating TF (uM)') % EDIT FOR HW1
+xlabel('Concentration of inhibiting TF (uM)') % EDIT FOR HW1
 ylabel('Concentration of product (uM)')
 set(gca,'ylim', [0,40]);
 
