@@ -27,7 +27,7 @@ legend("B-0","B-250","B-500","B+0","B+250","B+500")
 % Initial guess in the order of:
 % [lambdam; theta; InitialPopulation; alpha]
 % Note: Order here is important.
-initialguess = [1/60; 2; 0.01; 1];
+initialguess = [0.5; 2; 0.01; 0.2];
 
 %% Begin Curve Fit
 

@@ -1,6 +1,6 @@
 % model parameters
-eps = 0.08;
-a = 1.00;
+eps = 0.8;
+a = 1.0;
 b = 0.2;
 
 % model definition
