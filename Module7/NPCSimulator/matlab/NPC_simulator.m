@@ -61,7 +61,7 @@ parfor iSample=1:NSample
             break;
         end
         
-        if 0 % visualize
+        if 1 % visualize
             figure(1);
             plot(x(1),x(2),'-ob');
             drawnow;
@@ -82,3 +82,5 @@ toc % report the time
 figure(2); clf; hold on; box on;
 histogram(tCapture)
 %set(gca,'yscale','log')
+
+display(mean(tCapture))
